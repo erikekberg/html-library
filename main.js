@@ -22,11 +22,13 @@ addButton.addEventListener("click", () => {
     displayBooks();
 })
 
-function Book(title, author, pages, haveRead) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.haveRead = haveRead;
+class Book {
+    constructor(title, author, pages, haveRead) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.haveRead = haveRead;
+    }
 }
 
 const addBookToTibrary = (bookObject) => {
