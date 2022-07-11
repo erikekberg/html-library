@@ -16,7 +16,6 @@ const bookArray = [];
 
 addButton.addEventListener("click", () => {
     const newBook = new Book(titleInput.value, authorInput.value, pagesInput.value, haveReadInput.checked);
-    console.log(newBook);
     bookArray.push(newBook);
     newBook.index = bookArray.indexOf(newBook);
     displayBooks();
@@ -52,7 +51,6 @@ const addBookToTibrary = (bookObject) => {
     haveReadButton.checked = bookObject.haveRead;
     haveReadButton.addEventListener("click", () => {
         bookObject.haveRead = haveReadButton.checked;
-        console.log(bookObject.haveRead);
     })
 
     haveReadDiv.appendChild(haveReadLabel);
@@ -74,7 +72,6 @@ const addBookToTibrary = (bookObject) => {
     bookDiv.appendChild(removeButton);
 
     library.appendChild(bookDiv);
-    console.log("book added");
 }
 
 const displayBooks = () => {
@@ -83,3 +80,4 @@ const displayBooks = () => {
         addBookToTibrary(bookArray[i]);
     }
 }
+
