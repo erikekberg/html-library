@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.library {
+  grid-template-columns: 1 / 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 200px;
+  gap: 10px;
+  padding: 10px;
+}
+
+.book {
+  height: 200px;
+  width: 300px;
+  background-color: #d3d3d3;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-shadow: 6px 6px 4px gray;
+}
+
+.book ul * {
+  margin-bottom: 10px;
+}
+
+.book button {
+  width: 60%;
+  height: 30px;
+  align-self: center;
+}
+
+.have-read-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.form-container form {
+  grid-template-columns: 2 / 3;
+  background-color: #f9f9f9;
+  box-shadow: -5px 0px 5px gray;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+  text-align: center;
+}
+
+.form-container form input {
+  height: 40px;
+  text-align: center;
+  font-size: large;
+}
+
+.have-read {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.have-read input {
+  height: 30px;
+  width: 30px;
+}
+
+.add {
+  height: 70px;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.error {
+  background-color: red;
+}
+
+.error.active {
+  padding: 0.3em;
+  background-color: red;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}

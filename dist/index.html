@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="library"></div>
+    <div class="form-container">
+      <form action="" novalidate>
+        <div>
+          <label for="title">Title:</label>
+          <input type="text" id="title" maxlength="10" />
+          <span id="title-error"></span>
+        </div>
+        <div>
+          <label for="author">Author:</label>
+          <input type="text" id="author" minlength="2" />
+          <span id="author-error" class="error"></span>
+        </div>
+        <div>
+          <label for="pages">Pages:</label>
+          <input type="number" id="pages" min="0" max="9999" />
+          <span id="pages-error" class="error"></span>
+        </div>
+        <div class="have-read">
+          <label for="have-read">Have read:</label>
+          <input
+            type="checkbox"
+            name="have-read"
+            id="have-read"
+            checked="false"
+          />
+          <span id="have-read-error"></span>
+        </div>
+        <div class="add" type="button">Add book</div>
+      </form>
+    </div>
+
+    <script src="bundle.js"></script>
+  </body>
+</html>
